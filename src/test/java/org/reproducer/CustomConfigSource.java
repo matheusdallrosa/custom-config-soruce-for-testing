@@ -27,6 +27,9 @@ public class CustomConfigSource implements ConfigSource {
         if("smallrye.config.locations".equals(s)){
             return "application.properties";
         }
+        if("smallrye.jwt.sign.key-location".equals(s)){
+            return "privateKey.pem";
+        }
         throw new RuntimeException(": /");
     }
 
